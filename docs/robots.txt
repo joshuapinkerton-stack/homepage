@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://joshuapinkerton-stack.github.io/homepage/sitemap.xml
+Disallow:

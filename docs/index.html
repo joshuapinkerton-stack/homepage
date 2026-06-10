@@ -62,18 +62,18 @@
       <h2>About</h2>
       <div class="about-grid">
         <p>
-          I keep infrastructure running for a 12-school district in Fort Worth. 
-          As a Campus Technician at Everman ISD, my work ranges from pulling cable and patching switch ports to imaging laptops and managing Active Directory accounts. 
+          I keep infrastructure running for a 12-school district in Fort Worth.
+          As a Campus Technician at Everman ISD, my work ranges from pulling cable and patching switch ports to imaging laptops and managing Active Directory accounts.
           The goal is always the same: make sure teachers can teach and students can learn without tech getting in the way.
         </p>
         <p>
-          I’m also pursuing a <strong>B.S. in Cloud and Network Engineering at WGU</strong>. 
-          I’ve already passed <strong>CompTIA A+ Core 2</strong>, and I’m working through Core 1 and Linux fundamentals now. 
+          I’m also pursuing a <strong>B.S. in Cloud and Network Engineering at WGU</strong>.
+          I’ve already passed <strong>CompTIA A+ Core 2</strong>, and I’m working through Core 1 and Linux fundamentals now.
           Once I finish the degree, I want to move into cloud or data center work, ideally with an AWS focus.
         </p>
         <p>
-          At home I run a lab that mirrors what I see at work: Active Directory, Linux servers, VLANs, and a Minecraft server I use to practice permissions and backups. 
-          I treat those setups like real infrastructure, not experiments. 
+          At home I run a lab that mirrors what I see at work: Active Directory, Linux servers, VLANs, and a Minecraft server I use to practice permissions and backups.
+          I treat those setups like real infrastructure, not experiments.
           That’s where most of my actual learning happens.
         </p>
       </div>
@@ -211,7 +211,7 @@
             </div>
             <span class="meta">Jan 2026 – Expected 2027 · AWS Track</span>
           </div>
-          <p>Program emphasizes cloud infrastructure, networking fundamentals, cybersecurity, and systems administration. 
+          <p>Program emphasizes cloud infrastructure, networking fundamentals, cybersecurity, and systems administration.
           CompTIA A+ and AWS Cloud Practitioner are included in the curriculum.</p>
         </article>
 
@@ -274,7 +274,7 @@
     <section id="contact" class="section">
       <h2>Contact</h2>
       <p>
-        I’m based in Fort Worth, TX. If you think I’d be a fit, or if you just want 
+        I’m based in Fort Worth, TX. If you think I’d be a fit, or if you just want
         to talk shop about Linux, AWS, or homelab builds, reach out.
       </p>
       <div class="contact-grid">
@@ -313,11 +313,64 @@
           <span class="dot" />
         </div>
       </div>
+      <div class="retro-section">
+        <div class="retro-counter">
+          <span class="counter-label">VISITORS:</span>
+          <span class="counter-number" id="visitor-count">000000</span>
+        </div>
+        <div class="ip-location" id="ip-location">
+          Detecting your location...
+        </div>
+      </div>
     </div>
   </footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Retro visitor counter using a free counter service
+    var counterService = 'https://api.countapi.xyz';
+    var siteKey = 'joshuapinkerton-homepage';
+    var counterKey = 'visitor-count';
+
+    fetch(counterService + '/hit/' + siteKey + '/' + counterKey, { method: 'POST' })
+      .then(function(response) {
+        if (!response.ok) throw new Error('Counter service unavailable');
+        return response.json();
+      })
+      .then(function(data) {
+        var count = data.value || 0;
+        document.getElementById('visitor-count').textContent = String(count).padStart(6, '0');
+      })
+      .catch(function() {
+        document.getElementById('visitor-count').textContent = '000000';
+      });
+
+    // Display the visitor's public IP and approximate location
+    // Uses a free public IP geolocation API; no data is persisted
+    fetch('https://ipapi.co/json/', { headers: { Accept: 'application/json' } })
+      .then(function(response) {
+        if (!response.ok) throw new Error('IP lookup unavailable');
+        return response.json();
+      })
+      .then(function(data) {
+        var city = data.city || '';
+        var region = data.region || '';
+        var country = data.country_name || '';
+        var ip = data.ip || '';
+        var locationEl = document.getElementById('ip-location');
+        if (ip && (city || country)) {
+          var parts = [city, region, country].filter(Boolean);
+          locationEl.innerHTML = 'You are visiting from: <strong>' + ip + '</strong> (' + parts.join(', ') + ')';
+        } else if (ip) {
+          locationEl.innerHTML = 'Your IP: <strong>' + ip + '</strong>';
+        } else {
+          locationEl.textContent = 'Location lookup temporarily unavailable';
+        }
+      })
+      .catch(function() {
+        document.getElementById('ip-location').textContent = 'Location lookup temporarily unavailable';
+      });
   </script>
 </body>
 </html>

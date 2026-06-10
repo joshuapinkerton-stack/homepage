@@ -233,6 +233,37 @@ li + li {
   margin-top: 12px;
 }
 
+.cert-roadmap {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.cert-item.done {
+  border-color: rgba(63,185,80,0.5);
+}
+
+.cert-item.done h3 {
+  color: var(--accent);
+}
+
+.cert-item.in-progress {
+  border-color: rgba(88,166,255,0.5);
+}
+
+.cert-item.in-progress h3 {
+  color: var(--accent-2);
+}
+
+.cert-item.roadmap {
+  opacity: 0.9;
+}
+
+.cert-item.roadmap h3 {
+  color: var(--accent-3);
+}
+
 @media (max-width: 640px) {
   .brand h1 {
     font-size: 24px;

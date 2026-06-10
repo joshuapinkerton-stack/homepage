@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Joshua Pinkerton | Data Center & Cloud Engineering</title>
 <link rel="stylesheet" href="style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 </head>
 <body>
   <header class="site-header">
@@ -25,27 +28,30 @@
   </header>
 
   <main class="container">
+
     <section id="about" class="section">
       <h2>About</h2>
-      <p>
-        I build and maintain the infrastructure that keeps schools and organizations running.
-        Right now, I work as a <strong>Campus Technician at Everman ISD</strong> supporting a 
-        distributed K-12 network. My days jump between cabling and switch troubleshooting, 
-        imaging workstations, maintaining Active Directory, and making sure staff and students 
-        can actually teach and learn.
-      </p>
-      <p>
-        I am also completing a <strong>B.S. in Cloud and Network Engineering at WGU</strong> with 
-        an AWS track focus. I already hold my <strong>CompTIA A+ Core 2</strong>, and I am 
-        studying for Core 1 and Linux fundamentals now. The end goal is to move into 
-        cloud/network engineering and data center operations, with a focus on AWS and Linux.
-      </p>
-      <p>
-        Outside of work and school, I run a homelab and automation projects. That means an 
-        AD and Linux environment in VirtualBox, a Minecraft server with actual monitoring and 
-        backups, and whatever else I can squeeze into rack space or a spare VM. For me, 
-        “lab” does not mean toy. It means production-like practice.
-      </p>
+      <div class="two-col">
+        <p>
+          I build and maintain the infrastructure that keeps schools and organizations running.
+          Right now, I work as a <strong>Campus Technician at Everman ISD</strong> supporting a 
+          distributed K-12 network. My days jump between cabling and switch troubleshooting, 
+          imaging workstations, maintaining Active Directory, and making sure staff and students 
+          can actually teach and learn.
+        </p>
+        <p>
+          I am also completing a <strong>B.S. in Cloud and Network Engineering at WGU</strong> with 
+          an AWS track focus. I already hold my <strong>CompTIA A+ Core 2</strong>, and I am 
+          studying for Core 1 and Linux fundamentals now. The end goal is to move into 
+          cloud/network engineering and data center operations, with a focus on AWS and Linux.
+        </p>
+        <p>
+          Outside of work and school, I run a homelab and automation projects. That means an 
+          AD and Linux environment in VirtualBox, a Minecraft server with monitoring and 
+          backups, and whatever else I can squeeze into rack space or a spare VM. For me, 
+          “lab” does not mean toy. It means production-like practice.
+        </p>
+      </div>
       <div class="skills-grid">
         <span class="skill">Active Directory</span>
         <span class="skill">Linux Administration</span>
@@ -60,54 +66,56 @@
 
     <section id="experience" class="section">
       <h2>Experience</h2>
-      <article class="experience-item">
-        <div class="experience-header">
-          <div>
-            <h3>Campus Technician</h3>
-            <p class="organization">Everman Independent School District</p>
+      <div class="experience-list">
+        <article class="experience-item">
+          <div class="experience-header">
+            <div>
+              <h3>Campus Technician</h3>
+              <p class="organization">Everman Independent School District</p>
+            </div>
+            <span class="meta">Fort Worth, TX &middot; On-site &middot; June 2026 – Present</span>
           </div>
-          <span class="meta">Fort Worth, TX &middot; On-site &middot; June 2026 – Present</span>
-        </div>
-        <ul>
-          <li>Provide Tier 1 and 2 enterprise infrastructure support across a highly distributed K-12 campus network.</li>
-          <li>Troubleshoot and resolve Layer 1 through Layer 3 network connectivity issues, including physical cabling, switch connectivity, and IP routing.</li>
-          <li>Deploy, image, and manage end-user hardware; connect devices to Active Directory and ensure compliance with district IT policy.</li>
-          <li>Support a multi-OS environment including Windows, Chrome OS, iOS, and Linux variants.</li>
-          <li>Maintain accurate hardware inventory and draft technical documentation, user manuals, and troubleshooting flowcharts.</li>
-          <li>Collaborate with the Director of Technology and systems administrators on district-wide technology upgrades and after-hours network emergencies.</li>
-        </ul>
-      </article>
+          <ul>
+            <li>Tier 1 and 2 enterprise infrastructure support across a highly distributed K-12 campus network.</li>
+            <li>Troubleshoot and resolve Layer 1 through Layer 3 network connectivity issues, including physical cabling, switch connectivity, and IP routing.</li>
+            <li>Deploy and image end-user hardware, connect devices to Active Directory, and enforce district IT policy.</li>
+            <li>Support a multi-OS environment: Windows, Chrome OS, iOS, and Linux variants.</li>
+            <li>Maintain hardware inventory and draft documentation, user manuals, and troubleshooting flowcharts.</li>
+            <li>Work with the Director of Technology and systems administrators on district-wide upgrades and after-hours emergencies.</li>
+          </ul>
+        </article>
 
-      <article class="experience-item">
-        <div class="experience-header">
-          <div>
-            <h3>Student Service Desk Assistant Tier 1</h3>
-            <p class="organization">The University of Texas at Arlington</p>
+        <article class="experience-item">
+          <div class="experience-header">
+            <div>
+              <h3>Student Service Desk Assistant Tier 1</h3>
+              <p class="organization">The University of Texas at Arlington</p>
+            </div>
+            <span class="meta">Arlington, TX &middot; On-site &middot; Aug 2025 – Dec 2025</span>
           </div>
-          <span class="meta">Arlington, TX &middot; On-site &middot; Aug 2025 – Dec 2025</span>
-        </div>
-        <ul>
-          <li>Provided Tier 1 technical support for a 60,000-plus person university community across phone, chat, email, and walk-up channels.</li>
-          <li>Resolved account access issues including NetID activation, password resets, MFA troubleshooting, and email access.</li>
-          <li>Created and managed support tickets in ServiceNow with clear incident details, troubleshooting steps, and resolutions.</li>
-          <li>Authored and maintained internal knowledge base articles and training materials to improve team efficiency.</li>
-        </ul>
-      </article>
+          <ul>
+            <li>Tier 1 support for a 60,000-plus person university community across phone, chat, email, and walk-up channels.</li>
+            <li>Resolved account access issues including NetID activation, password resets, MFA troubleshooting, and email access.</li>
+            <li>Managed support tickets in ServiceNow with clear incident details, troubleshooting steps, and resolutions.</li>
+            <li>Authored and maintained internal knowledge base articles and training materials to improve team efficiency.</li>
+          </ul>
+        </article>
 
-      <article class="experience-item">
-        <div class="experience-header">
-          <div>
-            <h3>Technical Support Representative</h3>
-            <p class="organization">Tailored Brands, Inc.</p>
+        <article class="experience-item">
+          <div class="experience-header">
+            <div>
+              <h3>Technical Support Representative</h3>
+              <p class="organization">Tailored Brands, Inc.</p>
+            </div>
+            <span class="meta">Houston, TX &middot; Full-time &middot; Aug 2012 – Aug 2015</span>
           </div>
-          <span class="meta">Houston, TX &middot; Full-time &middot; Aug 2012 – Aug 2015</span>
-        </div>
-        <ul>
-          <li>Supported around 250 corporate office users with account management, software and hardware troubleshooting, and executive expedited support.</li>
-          <li>Managed user account lifecycle in Salesforce and ServiceNow, including identity verification and access provisioning and deprovisioning.</li>
-          <li>Maintained asset inventory tracking, device relocation, and replacement equipment ordering.</li>
-        </ul>
-      </article>
+          <ul>
+            <li>Supported around 250 corporate office users with account management, software and hardware troubleshooting, and executive expedited support.</li>
+            <li>Managed user account lifecycle in Salesforce and ServiceNow, including identity verification and access provisioning and deprovisioning.</li>
+            <li>Maintained asset inventory tracking, device relocation, and replacement equipment ordering.</li>
+          </ul>
+        </article>
+      </div>
     </section>
 
     <section id="projects" class="section">
@@ -154,20 +162,31 @@
 
     <section id="education" class="section">
       <h2>Education</h2>
-      <article class="edu-item">
-        <h3>B.S. Cloud and Network Engineering</h3>
-        <p class="institution">Western Governors University</p>
-        <p class="meta">Jan 2026 – Expected 2027 &middot; AWS Track</p>
-        <p>Program emphasizes cloud infrastructure, networking fundamentals, cybersecurity, and systems administration. 
-        Complete industry certifications as part of the curriculum, including CompTIA A+ and AWS Cloud Practitioner.</p>
-      </article>
-      <article class="edu-item">
-        <h3>Coursework toward A.S. Cybersecurity</h3>
-        <p class="institution">Tarrant County College</p>
-        <p class="meta">May 2024 – Jul 2025</p>
-        <p>Completed coursework with 3.34 GPA. Heavy emphasis on information security, network administration,
-        cybersecurity fundamentals, and computer forensics.</p>
-      </article>
+      <div class="experience-list">
+        <article class="experience-item">
+          <div class="experience-header">
+            <div>
+              <h3>B.S. Cloud and Network Engineering</h3>
+              <p class="organization">Western Governors University</p>
+            </div>
+            <span class="meta">Jan 2026 – Expected 2027 &middot; AWS Track</span>
+          </div>
+          <p>Program emphasizes cloud infrastructure, networking fundamentals, cybersecurity, and systems administration. 
+          CompTIA A+ and AWS Cloud Practitioner are included in the curriculum.</p>
+        </article>
+
+        <article class="experience-item">
+          <div class="experience-header">
+            <div>
+              <h3>Coursework toward A.S. Cybersecurity</h3>
+              <p class="organization">Tarrant County College</p>
+            </div>
+            <span class="meta">May 2024 – Jul 2025</span>
+          </div>
+          <p>Completed coursework with 3.34 GPA. Heavy emphasis on information security, network administration,
+          cybersecurity fundamentals, and computer forensics.</p>
+        </article>
+      </div>
     </section>
 
     <section id="certifications" class="section">
@@ -179,7 +198,7 @@
         </div>
         <div class="cert-item in-progress">
           <h3>CompTIA A+ Core 1 (220-1201)</h3>
-          <p class="institution">Up next. Focusing on mobile, networking, hardware, and cloud concepts.</p>
+          <p class="institution">Up next. Mobile, networking, hardware, and cloud concepts.</p>
         </div>
         <div class="cert-item roadmap">
           <h3>CompTIA Linux+ / Linux Essentials</h3>
@@ -226,6 +245,7 @@
         </div>
       </div>
     </section>
+
   </main>
 
   <footer class="site-footer">

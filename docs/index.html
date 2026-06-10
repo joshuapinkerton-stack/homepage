@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="style.css" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 </head>
 <body>
   <header class="site-header">
@@ -28,10 +28,27 @@
   </header>
 
   <main class="container">
+    
+    <section class="section hero">
+      <p class="section-label">What I do</p>
+      <h2 class="hero-title">
+        I keep networks alive,<br />
+        then I build the clouds around them.
+      </h2>
+      <p class="hero-sub">
+        I’m a Campus Technician at Everman ISD, a WGU Cloud and Network Engineering student, 
+        and a homelab tinkerer who treats infrastructure like a craft. This portfolio is a snapshot of where I am now, 
+        what I’m building, and where I’m headed next.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn primary">See my projects</a>
+        <a href="#contact" class="btn ghost">Get in touch</a>
+      </div>
+    </section>
 
     <section id="about" class="section">
       <h2>About</h2>
-      <div class="two-col">
+      <div class="about-grid">
         <p>
           I build and maintain the infrastructure that keeps schools and organizations running.
           Right now, I work as a <strong>Campus Technician at Everman ISD</strong> supporting a 
@@ -120,6 +137,7 @@
 
     <section id="projects" class="section">
       <h2>Projects</h2>
+      <p class="section-intro">Things I build in my spare time because I don’t know how to stop learning.</p>
       <div class="project-grid">
         <article class="project-card">
           <h3>Virtualized Home Lab (AD + Linux)</h3>
@@ -191,26 +209,42 @@
 
     <section id="certifications" class="section">
       <h2>Certifications</h2>
-      <div class="cert-roadmap">
+      <p class="section-intro">My certification roadmap, based on my WGU program and what I’ve already completed.</p>
+      <div class="cert-grid">
         <div class="cert-item done">
-          <h3>CompTIA A+ Core 2 (220-1202)</h3>
-          <p class="institution">Score 771 / 900 &middot; Issued April 2026</p>
+          <div class="cert-status completed"></div>
+          <div>
+            <h3>CompTIA A+ Core 2 (220-1202)</h3>
+            <p class="cert-meta">Score 771 / 900 &middot; Issued April 2026</p>
+          </div>
         </div>
         <div class="cert-item in-progress">
-          <h3>CompTIA A+ Core 1 (220-1201)</h3>
-          <p class="institution">Up next. Mobile, networking, hardware, and cloud concepts.</p>
+          <div class="cert-status active"></div>
+          <div>
+            <h3>CompTIA A+ Core 1 (220-1201)</h3>
+            <p class="cert-meta">Up next. Mobile, networking, hardware, and cloud concepts.</p>
+          </div>
         </div>
         <div class="cert-item roadmap">
-          <h3>CompTIA Linux+ / Linux Essentials</h3>
-          <p class="institution">Planned. Part of the WGU Cloud and Network Engineering curriculum after A+ completion.</p>
+          <div class="cert-status planned"></div>
+          <div>
+            <h3>CompTIA Linux+ / Linux Essentials</h3>
+            <p class="cert-meta">Planned. Part of the WGU Cloud and Network Engineering curriculum after A+.</p>
+          </div>
         </div>
         <div class="cert-item roadmap">
-          <h3>CompTIA Network+</h3>
-          <p class="institution">Planned. Included in the WGU track and pairs with the Linux path for a strong infrastructure foundation.</p>
+          <div class="cert-status planned"></div>
+          <div>
+            <h3>CompTIA Network+</h3>
+            <p class="cert-meta">Planned. Included in the WGU track and pairs with the Linux path for a strong infrastructure foundation.</p>
+          </div>
         </div>
         <div class="cert-item roadmap">
-          <h3>AWS Cloud Practitioner</h3>
-          <p class="institution">Planned. Included in the WGU curriculum and a natural bridge from on-prem infrastructure into cloud.</p>
+          <div class="cert-status planned"></div>
+          <div>
+            <h3>AWS Cloud Practitioner</h3>
+            <p class="cert-meta">Planned. Included in the WGU curriculum and a natural bridge from on-prem infrastructure into cloud.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -223,26 +257,26 @@
         to talk shop about Linux, AWS, or homelab builds, reach out.
       </p>
       <div class="contact-grid">
-        <div class="contact-card">
+        <a href="https://www.linkedin.com/in/jbpinkerton" target="_blank" rel="noopener" class="contact-card">
           <h3>LinkedIn</h3>
-          <p>Best for professional background and recruiters.</p>
-          <a href="https://www.linkedin.com/in/jbpinkerton" target="_blank" rel="noopener">linkedin.com/in/jbpinkerton</a>
-        </div>
-        <div class="contact-card">
+          <p>Professional background and recruiter contact.</p>
+          <span class="contact-link">linkedin.com/in/jbpinkerton</span>
+        </a>
+        <a href="mailto:joshuapinkerton@gmail.com" class="contact-card">
           <h3>Email</h3>
           <p>Direct line for opportunities and questions.</p>
-          <a href="mailto:joshuapinkerton@gmail.com">joshuapinkerton@gmail.com</a>
-        </div>
-        <div class="contact-card">
+          <span class="contact-link">joshuapinkerton@gmail.com</span>
+        </a>
+        <a href="https://github.com/joshuapinkerton-stack" target="_blank" rel="noopener" class="contact-card">
           <h3>GitHub</h3>
           <p>Repos, homelab docs, and project code.</p>
-          <a href="https://github.com/joshuapinkerton-stack" target="_blank" rel="noopener">github.com/joshuapinkerton-stack</a>
-        </div>
-        <div class="contact-card">
+          <span class="contact-link">github.com/joshuapinkerton-stack</span>
+        </a>
+        <a href="mailto:joshuapinkerton@gmail.com?subject=Chat%20with%20Joshua" class="contact-card">
           <h3>Chat with me</h3>
-          <p>Available for questions about infrastructure, career transitions into cloud, or study strategies.</p>
-          <a href="mailto:joshuapinkerton@gmail.com?subject=Chat%20with%20Joshua">Start a conversation</a>
-        </div>
+          <p>Questions about infrastructure, career transitions into cloud, or study strategies.</p>
+          <span class="contact-link">Start a conversation</span>
+        </a>
       </div>
     </section>
 

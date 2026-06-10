@@ -441,41 +441,24 @@ li + li {
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.07);
   border-radius: 14px;
-  padding: 24px 22px;
+  padding: 24px 24px;
   display: flex;
   flex-direction: column;
+  gap: 12px;
   transition: background 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
   position: relative;
-  overflow: hidden;
-}
-
-.project-card::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, rgba(59, 130, 246, 0.3), transparent 70%);
-  opacity: 0;
-  transition: opacity 0.2s ease;
-}
-
-.project-card:hover::after {
-  opacity: 1;
 }
 
 .project-card:hover {
   background: rgba(255, 255, 255, 0.035);
   border-color: rgba(255, 255, 255, 0.13);
-  transform: translateY(-3px);
+  transform: translateY(-2px);
 }
 
 .card-header {
   display: flex;
   align-items: flex-start;
   gap: 14px;
-  margin-bottom: 12px;
 }
 
 .card-icon {

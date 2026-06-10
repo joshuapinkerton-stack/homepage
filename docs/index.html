@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Joshua Pinkerton | Data Center & Cloud Engineering</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <h1>Joshua Pinkerton</h1>
+        <p class="tagline">Campus Technician and cloud/network engineering student based in DFW. I build things that run, and then I make them run better.</p>
+      </div>
+      <nav class="top-nav">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="about" class="section">
+      <h2>About</h2>
+      <p>
+        I build and maintain the infrastructure that keeps schools and organizations running.
+        Right now, I work as a <strong>Campus Technician at Everman ISD</strong> supporting a 
+        distributed K-12 network. My days jump between cabling and switch troubleshooting, 
+        imaging workstations, maintaining Active Directory, and making sure staff and students 
+        can actually teach and learn.
+      </p>
+      <p>
+        I am also completing a <strong>B.S. in Cloud and Network Engineering at WGU</strong> with 
+        an AWS track focus. I already hold my <strong>CompTIA A+ Core 2</strong>, and I am 
+        studying for Core 1 and Linux fundamentals now. The end goal is to move into 
+        cloud/network engineering and data center operations, with a focus on AWS and Linux.
+      </p>
+      <p>
+        Outside of work and school, I run a homelab and automation projects. That means an 
+        AD and Linux environment in VirtualBox, a Minecraft server with actual monitoring and 
+        backups, and whatever else I can squeeze into rack space or a spare VM. For me, 
+        “lab” does not mean toy. It means production-like practice.
+      </p>
+      <div class="skills-grid">
+        <span class="skill">Active Directory</span>
+        <span class="skill">Linux Administration</span>
+        <span class="skill">Windows 10/11 & Server</span>
+        <span class="skill">AWS Fundamentals</span>
+        <span class="skill">ServiceNow</span>
+        <span class="skill">Layer 1-3 Networking</span>
+        <span class="skill">Virtualization (VirtualBox)</span>
+        <span class="skill">Technical Documentation</span>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <h2>Experience</h2>
+      <article class="experience-item">
+        <div class="experience-header">
+          <div>
+            <h3>Campus Technician</h3>
+            <p class="organization">Everman Independent School District</p>
+          </div>
+          <span class="meta">Fort Worth, TX &middot; On-site &middot; June 2026 – Present</span>
+        </div>
+        <ul>
+          <li>Provide Tier 1 and 2 enterprise infrastructure support across a highly distributed K-12 campus network.</li>
+          <li>Troubleshoot and resolve Layer 1 through Layer 3 network connectivity issues, including physical cabling, switch connectivity, and IP routing.</li>
+          <li>Deploy, image, and manage end-user hardware; connect devices to Active Directory and ensure compliance with district IT policy.</li>
+          <li>Support a multi-OS environment including Windows, Chrome OS, iOS, and Linux variants.</li>
+          <li>Maintain accurate hardware inventory and draft technical documentation, user manuals, and troubleshooting flowcharts.</li>
+          <li>Collaborate with the Director of Technology and systems administrators on district-wide technology upgrades and after-hours network emergencies.</li>
+        </ul>
+      </article>
+
+      <article class="experience-item">
+        <div class="experience-header">
+          <div>
+            <h3>Student Service Desk Assistant Tier 1</h3>
+            <p class="organization">The University of Texas at Arlington</p>
+          </div>
+          <span class="meta">Arlington, TX &middot; On-site &middot; Aug 2025 – Dec 2025</span>
+        </div>
+        <ul>
+          <li>Provided Tier 1 technical support for a 60,000-plus person university community across phone, chat, email, and walk-up channels.</li>
+          <li>Resolved account access issues including NetID activation, password resets, MFA troubleshooting, and email access.</li>
+          <li>Created and managed support tickets in ServiceNow with clear incident details, troubleshooting steps, and resolutions.</li>
+          <li>Authored and maintained internal knowledge base articles and training materials to improve team efficiency.</li>
+        </ul>
+      </article>
+
+      <article class="experience-item">
+        <div class="experience-header">
+          <div>
+            <h3>Technical Support Representative</h3>
+            <p class="organization">Tailored Brands, Inc.</p>
+          </div>
+          <span class="meta">Houston, TX &middot; Full-time &middot; Aug 2012 – Aug 2015</span>
+        </div>
+        <ul>
+          <li>Supported around 250 corporate office users with account management, software and hardware troubleshooting, and executive expedited support.</li>
+          <li>Managed user account lifecycle in Salesforce and ServiceNow, including identity verification and access provisioning and deprovisioning.</li>
+          <li>Maintained asset inventory tracking, device relocation, and replacement equipment ordering.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <div class="project-grid">
+        <article class="project-card">
+          <h3>Virtualized Home Lab (AD + Linux)</h3>
+          <p>
+            Built a multi-VM environment in VirtualBox with a Windows Server domain controller
+            and Ubuntu Server endpoints. I use it to practice OS-level Linux administration, 
+            domain-join workflows, and GPO troubleshooting.
+          </p>
+          <ul>
+            <li>Simulated enterprise campus VLAN segmentation and inter-VM routing.</li>
+            <li>Documented build steps, configuration baselines, and incident-response playbooks.</li>
+          </ul>
+        </article>
+
+        <article class="project-card">
+          <h3>Homelab Incident Tracker</h3>
+          <p>
+            Designed my first Git project for tracking and managing homelab incidents and change records. 
+            It provides repeatable incident handling, status history, and resolution tracking for a small home environment.
+          </p>
+          <ul>
+            <li>Built with Git and documented in a public repository.</li>
+            <li>Demonstrates change control and documentation discipline for IT environments.</li>
+          </ul>
+        </article>
+
+        <article class="project-card">
+          <h3>Minecraft Multiplayer Server Ops</h3>
+          <p>
+            Managed authentication backend, permissions management, and network troubleshooting
+            for 15-plus concurrent users over a persistent gaming environment.
+          </p>
+          <ul>
+            <li>Applied the same incident-tracking and rolling backup methodology used in homelab work.</li>
+            <li>Reduced downtime and stabilized player experience across restarts.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="education" class="section">
+      <h2>Education and Certifications</h2>
+      <article class="edu-item">
+        <h3>B.S. Cloud and Network Engineering</h3>
+        <p class="institution">Western Governors University</p>
+        <p class="meta">Jan 2026 – Expected 2027 &middot; AWS Track</p>
+        <p>Program emphasizes cloud infrastructure, networking fundamentals, cybersecurity, and systems administration. 
+        Complete industry certifications as part of the curriculum, including CompTIA A+ and AWS Cloud Practitioner.</p>
+      </article>
+      <article class="edu-item">
+        <h3>Coursework toward A.S. Cybersecurity</h3>
+        <p class="institution">Tarrant County College</p>
+        <p class="meta">May 2024 – Jul 2025</p>
+        <p>Completed coursework with 3.34 GPA. Heavy emphasis on information security, network administration,
+        cybersecurity fundamentals, and computer forensics.</p>
+      </article>
+      <article class="cert-item">
+        <h3>CompTIA A+ Core 2 (220-1202)</h3>
+        <p class="institution">Score 771 / 900 &middot; Issued April 2026</p>
+      </article>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p>
+        I am based in Fort Worth, TX and open to opportunities in data center, IT operations, 
+        and cloud infrastructure roles. If you think I would be a fit, or if you just want 
+        to talk shop about Linux, AWS, or homelab builds, reach out.
+      </p>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>LinkedIn</h3>
+          <p>Best for professional background and recruiters.</p>
+          <a href="https://www.linkedin.com/in/jbpinkerton" target="_blank" rel="noopener">linkedin.com/in/jbpinkerton</a>
+        </div>
+        <div class="contact-card">
+          <h3>Email</h3>
+          <p>Direct line for opportunities and questions.</p>
+          <a href="mailto:joshuapinkerton@gmail.com">joshuapinkerton@gmail.com</a>
+        </div>
+        <div class="contact-card">
+          <h3>GitHub</h3>
+          <p>Repos, homelab docs, and project code.</p>
+          <a href="https://github.com/joshuapinkerton-stack" target="_blank" rel="noopener">github.com/joshuapinkerton-stack</a>
+        </div>
+        <div class="contact-card">
+          <h3>Chat with me</h3>
+          <p>Available for questions about infrastructure, career transitions into cloud, or study strategies.</p>
+          <a href="mailto:joshuapinkerton@gmail.com?subject=Chat%20with%20Joshua">Start a conversation</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Joshua Pinkerton. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

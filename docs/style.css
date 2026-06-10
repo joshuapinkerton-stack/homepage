@@ -1,0 +1,250 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #0e1116;
+  --surface: #161b22;
+  --muted: #8b949e;
+  --text: #e6edf3;
+  --accent: #3fb950;
+  --accent-2: #58a6ff;
+  --accent-3: #d29922;
+  --border: #30363d;
+  --radius: 12px;
+  --max-width: 980px;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, sans-serif;
+  background: radial-gradient(circle at top left, #1c2333, #0e1116 40%);
+  color: var(--text);
+  line-height: 1.65;
+}
+
+a {
+  color: var(--accent-2);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.site-header {
+  padding: 48px 0 24px;
+  border-bottom: 1px solid var(--border);
+  background: linear-gradient(180deg, rgba(88,166,255,0.08) 0%, transparent 100%);
+}
+
+.brand h1 {
+  margin: 0 0 10px;
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.tagline {
+  margin: 0 0 22px;
+  color: var(--muted);
+  font-size: 15px;
+  max-width: 680px;
+}
+
+.top-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+}
+
+.top-nav a {
+  color: var(--accent-2);
+  font-weight: 600;
+  font-size: 14px;
+  padding: 6px 12px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.03);
+  transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+.top-nav a:hover {
+  border-color: var(--border);
+  text-decoration: none;
+  background: rgba(255,255,255,0.07);
+  transform: translateY(-1px);
+}
+
+.section {
+  padding: 40px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.section h2 {
+  margin: 0 0 16px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.section p {
+  color: #c9d1d9;
+  max-width: 780px;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.skill {
+  background: linear-gradient(180deg, rgba(63,185,80,0.15), rgba(63,185,80,0.05));
+  color: var(--text);
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  border: 1px solid rgba(63,185,80,0.35);
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.skill:hover {
+  transform: translateY(-1px);
+  background: linear-gradient(180deg, rgba(63,185,80,0.25), rgba(63,185,80,0.1));
+}
+
+.experience-item,
+.edu-item,
+.project-card,
+.cert-item {
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 22px;
+  margin-top: 14px;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.experience-item:hover,
+.edu-item:hover,
+.project-card:hover,
+.cert-item:hover {
+  border-color: #484f58;
+  transform: translateY(-1px);
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.experience-header h3,
+.edu-item h3,
+.project-card h3,
+.cert-item h3 {
+  margin: 0 0 4px;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.organization {
+  color: var(--accent-2);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.meta {
+  color: var(--muted);
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+ul {
+  margin: 10px 0 0;
+  padding-left: 22px;
+}
+
+li + li {
+  margin-top: 8px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin-top: 6px;
+}
+
+.project-card ul {
+  margin-top: 12px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.contact-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.contact-card:hover {
+  border-color: #484f58;
+  transform: translateY(-2px);
+}
+
+.contact-card h3 {
+  margin: 0 0 6px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.contact-card p {
+  margin: 0 0 10px;
+  color: var(--muted);
+  font-size: 13px;
+  max-width: none;
+}
+
+.site-footer {
+  padding: 28px 0 56px;
+  color: var(--muted);
+  font-size: 13px;
+  border-top: 1px solid var(--border);
+  margin-top: 12px;
+}
+
+@media (max-width: 640px) {
+  .brand h1 {
+    font-size: 24px;
+  }
+  .top-nav {
+    gap: 8px 10px;
+  }
+  .experience-header {
+    flex-direction: column;
+  }
+  .meta {
+    white-space: normal;
+  }
+}
+

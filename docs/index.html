@@ -313,23 +313,12 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Retro visitor counter using a free counter service
-    var counterService = 'https://api.countapi.xyz';
-    var siteKey = 'joshuapinkerton-homepage';
-    var counterKey = 'visitor-count';
-
-    fetch(counterService + '/hit/' + siteKey + '/' + counterKey, { method: 'POST' })
-      .then(function(response) {
-        if (!response.ok) throw new Error('Counter service unavailable');
-        return response.json();
-      })
-      .then(function(data) {
-        var count = data.value || 0;
-        document.getElementById('visitor-count').textContent = String(count).padStart(6, '0');
-      })
-      .catch(function() {
-        document.getElementById('visitor-count').textContent = '000000';
-      });
+    // Retro visitor counter - local only, no external service
+    var counterEl = document.getElementById('visitor-count');
+    var count = parseInt(localStorage.getItem('visitor-count') || '0', 10);
+    count += 1;
+    localStorage.setItem('visitor-count', String(count));
+    counterEl.textContent = String(count).padStart(6, '0');
 
     // Display the visitor's public IP and approximate location
     // Uses a free public IP geolocation API; no data is persisted

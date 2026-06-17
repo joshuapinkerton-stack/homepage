@@ -18,6 +18,13 @@
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta name="twitter:card" content="summary_large_image" />
+
+<!-- Privacy-friendly analytics by Plausible -->
+<script async src="https://plausible.io/js/pa-bnSREZhtbHLFEfdZKTtOh.js"></script>
+<script>
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  plausible.init()
+</script>
 </head>
 <body>
 <div class="noise"></div>
@@ -325,39 +332,6 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Retro visitor counter - local only, no external service
-    var counterEl = document.getElementById('visitor-count');
-    var count = parseInt(localStorage.getItem('visitor-count') || '0', 10);
-    count += 1;
-    localStorage.setItem('visitor-count', String(count));
-    counterEl.textContent = String(count).padStart(6, '0');
-
-    // Display the visitor's public IP and approximate location
-    // Uses a free public IP geolocation API; no data is persisted
-    fetch('https://ipapi.co/json/', { headers: { Accept: 'application/json' } })
-      .then(function(response) {
-        if (!response.ok) throw new Error('IP lookup unavailable');
-        return response.json();
-      })
-      .then(function(data) {
-        var city = data.city || '';
-        var region = data.region || '';
-        var country = data.country_name || '';
-        var ip = data.ip || '';
-        var locationEl = document.getElementById('ip-location');
-        if (ip && (city || country)) {
-          var parts = [city, region, country].filter(Boolean);
-          locationEl.innerHTML = 'You are visiting from: <strong>' + ip + '</strong> (' + parts.join(', ') + ')';
-        } else if (ip) {
-          locationEl.innerHTML = 'Your IP: <strong>' + ip + '</strong>';
-        } else {
-          locationEl.textContent = 'Location lookup temporarily unavailable';
-        }
-      })
-      .catch(function() {
-        document.getElementById('ip-location').textContent = 'Location lookup temporarily unavailable';
-      });
   </script>
 </body>
 </html>
